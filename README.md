@@ -21,10 +21,27 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000>.
 
+## Reviewing it
+
+`preview.html` is the prototype harness: the page in a device window, with the
+breakpoint and theme toolbar from the design canvas.
+
+- **Breakpoint** — 320, 768, 1280, 1920, or Auto for the live browser width.
+  Fixed sizes scale down to fit and the readout shows the scale factor.
+- **Theme** — dark or light.
+
+Both choices persist across reloads.
+
+The frame is a real iframe, so the page's own media queries do the work: what
+you see at 768 is what a 768px browser gets, not a simulation.
+
+`index.html` stays free of any of this — it's the page as it would ship.
+
 ## Structure
 
 ```
 index.html              the page
+preview.html            device-frame harness for review, not part of the page
 assets/css/tokens.css   design tokens, resolved at four breakpoints
 assets/css/styles.css   components
 assets/js/main.js       challenge carousel + background cell parallax
@@ -70,8 +87,9 @@ runs vertically below 1280 and horizontally above it.
 ### Themes
 
 Dark is the default. A light theme ships as an ink/paper flip of the same
-tokens — set `data-theme="light"` on `<html>`. Yellow has no contrast on paper,
-so the accent becomes brand orange, darkened again where it is used as type.
+tokens — set `data-theme="light"` on `<html>`, or use the toggle in
+`preview.html`. Yellow has no contrast on paper, so the accent becomes brand
+orange, darkened again where it is used as type.
 
 ## Fonts
 

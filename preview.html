@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview — CGC news hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --desk: #2A2A2C;
+    --bar: rgba(0, 0, 0, 0.72);
+    --hairline: rgba(255, 255, 255, 0.14);
+    --chip: rgba(255, 255, 255, 0.08);
+    --chip-edge: rgba(255, 255, 255, 0.22);
+    --ink: #FFFFFF;
+    --ink-dim: rgba(255, 255, 255, 0.5);
+    --accent: #FFE534;
+  }
+  :root[data-theme='light'] { --desk: #8E8E91; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--desk);
+    font-family: 'Poppins', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- toolbar --- */
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: var(--bar);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .bar__label {
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-right: 2px;
+  }
+
+  .bar__divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    margin: 0 4px;
+  }
+
+  .bar__readout {
+    margin-left: auto;
+    font-size: 11px;
+    line-height: 1.2;
+    color: var(--ink-dim);
+  }
+
+  .chip {
+    padding: 7px 13px;
+    border: none;
+    border-radius: 100px;
+    background: var(--chip);
+    box-shadow: inset 0 0 0 1px var(--chip-edge);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+  .chip[aria-pressed='true'] {
+    background: var(--accent);
+    box-shadow: none;
+    color: #000;
+  }
+  .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* --- device window ---
+     The frame is a real iframe, so the page's own media queries do the work:
+     what you see at 768 is what a 768px browser gets, not a simulation. */
+  .stage { padding: 28px 24px 40px; }
+
+  .sizer { margin: 0 auto; }
+
+  .viewport {
+    transform-origin: top left;
+    overflow: hidden;
+    background: #0B0B0B;
+    border-radius: 10px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+  .viewport--auto { width: 100%; }
+
+  .viewport iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <span class="bar__label">Breakpoint</span>
+  <button class="chip" type="button" data-bp="320" aria-pressed="false">320</button>
+  <button class="chip" type="button" data-bp="768" aria-pressed="false">768</button>
+  <button class="chip" type="button" data-bp="1280" aria-pressed="true">1280</button>
+  <button class="chip" type="button" data-bp="1920" aria-pressed="false">1920</button>
+  <button class="chip" type="button" data-bp="auto" aria-pressed="false">Auto</button>
+
+  <span class="bar__divider"></span>
+
+  <span class="bar__label">Theme</span>
+  <button class="chip" type="button" data-theme-tab="dark" aria-pressed="true">Dark</button>
+  <button class="chip" type="button" data-theme-tab="light" aria-pressed="false">Light</button>
+
+  <span class="bar__readout" data-readout></span>
+</div>
+
+<div class="stage">
+  <div class="sizer" data-sizer>
+    <div class="viewport" data-viewport>
+      <iframe src="index.html" title="CGC news hub" data-frame></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* Device heights from the design canvas. */
+  var HEIGHTS = { 320: 568, 768: 1024, 1280: 832, 1920: 1080 };
+  var STAGE_PADDING = 48;
+
+  var stage = document.querySelector('.stage');
+  var sizer = document.querySelector('[data-sizer]');
+  var viewport = document.querySelector('[data-viewport]');
+  var frame = document.querySelector('[data-frame]');
+  var readout = document.querySelector('[data-readout]');
+
+  var state = {
+    bp: read('cgc-preview-bp', '1280'),
+    theme: read('cgc-preview-theme', 'dark')
+  };
+
+  function read(key, fallback) {
+    try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; }
+  }
+  function write(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) {}
+  }
+
+  function applyTheme() {
+    document.documentElement.setAttribute('data-theme', state.theme);
+
+    var doc = frame.contentDocument;
+    if (doc && doc.documentElement) {
+      doc.documentElement.setAttribute('data-theme', state.theme);
+    }
+
+    document.querySelectorAll('[data-theme-tab]').forEach(function (button) {
+      button.setAttribute(
+        'aria-pressed',
+        button.getAttribute('data-theme-tab') === state.theme ? 'true' : 'false'
+      );
+    });
+  }
+
+  function applyBreakpoint() {
+    document.querySelectorAll('[data-bp]').forEach(function (button) {
+      button.setAttribute(
+        'aria-pressed',
+        button.getAttribute('data-bp') === state.bp ? 'true' : 'false'
+      );
+    });
+
+    var available = stage.clientWidth - STAGE_PADDING;
+    if (!(available > 0)) return;
+
+    if (state.bp === 'auto') {
+      viewport.classList.add('viewport--auto');
+      /* Clear the scale left behind by a fixed breakpoint — an inline
+         transform outranks the class, so auto would render at half size. */
+      viewport.style.transform = '';
+      viewport.style.width = '100%';
+      viewport.style.height = Math.max(400, window.innerHeight - 140) + 'px';
+      sizer.style.width = '100%';
+      sizer.style.height = '';
+      readout.textContent = Math.round(viewport.clientWidth) + 'px — live viewport';
+      return;
+    }
+
+    viewport.classList.remove('viewport--auto');
+
+    var width = Number(state.bp);
+    var height = HEIGHTS[width] || 900;
+    /* Never write scale(0): clamp against a bad measurement. */
+    var scale = Math.min(1, Math.max(0.05, available / width));
+
+    viewport.style.width = width + 'px';
+    viewport.style.height = height + 'px';
+    viewport.style.transform = scale < 1 ? 'scale(' + scale + ')' : '';
+
+    /* transform doesn't affect layout, so the sizer supplies the scaled box. */
+    sizer.style.width = Math.round(width * scale) + 'px';
+    sizer.style.height = Math.ceil(height * scale) + 'px';
+
+    readout.textContent = width + '×' + height +
+      (scale < 1 ? ' · ' + Math.round(scale * 100) + '% scale' : '');
+  }
+
+  document.querySelector('.bar').addEventListener('click', function (event) {
+    var button = event.target.closest('[data-bp],[data-theme-tab]');
+    if (!button) return;
+
+    if (button.hasAttribute('data-bp')) {
+      state.bp = button.getAttribute('data-bp');
+      write('cgc-preview-bp', state.bp);
+      applyBreakpoint();
+    } else {
+      state.theme = button.getAttribute('data-theme-tab');
+      write('cgc-preview-theme', state.theme);
+      applyTheme();
+    }
+  });
+
+  /* The theme has to be re-stamped every time the frame navigates. */
+  frame.addEventListener('load', applyTheme);
+  window.addEventListener('resize', applyBreakpoint);
+
+  applyTheme();
+  applyBreakpoint();
+})();
+</script>
+
+</body>
+</html>
