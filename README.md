@@ -26,8 +26,8 @@ Then open <http://localhost:8000>.
 `preview.html` is the prototype harness: the page in a device window, with the
 breakpoint and theme toolbar from the design canvas.
 
-- **Breakpoint** — 320, 768, 1280, 1920, or Auto for the live browser width.
-  Fixed sizes scale down to fit and the readout shows the scale factor.
+- **Breakpoint** — 320, 768, 1280 or 1920. Sizes scale down to fit the window
+  and the readout shows the scale factor.
 - **Theme** — dark or light.
 
 Both choices persist across reloads.

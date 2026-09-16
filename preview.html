@@ -105,8 +105,6 @@
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5),
                 inset 0 0 0 1px rgba(255, 255, 255, 0.12);
   }
-  .viewport--auto { width: 100%; }
-
   .viewport iframe {
     display: block;
     width: 100%;
@@ -123,7 +121,6 @@
   <button class="chip" type="button" data-bp="768" aria-pressed="false">768</button>
   <button class="chip" type="button" data-bp="1280" aria-pressed="true">1280</button>
   <button class="chip" type="button" data-bp="1920" aria-pressed="false">1920</button>
-  <button class="chip" type="button" data-bp="auto" aria-pressed="false">Auto</button>
 
   <span class="bar__divider"></span>
 
@@ -157,8 +154,10 @@
   var readout = document.querySelector('[data-readout]');
 
   var state = {
-    bp: read('cgc-preview-bp', '1280'),
-    theme: read('cgc-preview-theme', 'dark')
+    /* A stored value from an older build may name a breakpoint that no longer
+       exists, so fall back rather than trusting it. */
+    bp: HEIGHTS[read('cgc-preview-bp', '1280')] ? read('cgc-preview-bp', '1280') : '1280',
+    theme: read('cgc-preview-theme', 'dark') === 'light' ? 'light' : 'dark'
   };
 
   function read(key, fallback) {
@@ -194,21 +193,6 @@
 
     var available = stage.clientWidth - STAGE_PADDING;
     if (!(available > 0)) return;
-
-    if (state.bp === 'auto') {
-      viewport.classList.add('viewport--auto');
-      /* Clear the scale left behind by a fixed breakpoint — an inline
-         transform outranks the class, so auto would render at half size. */
-      viewport.style.transform = '';
-      viewport.style.width = '100%';
-      viewport.style.height = Math.max(400, window.innerHeight - 140) + 'px';
-      sizer.style.width = '100%';
-      sizer.style.height = '';
-      readout.textContent = Math.round(viewport.clientWidth) + 'px — live viewport';
-      return;
-    }
-
-    viewport.classList.remove('viewport--auto');
 
     var width = Number(state.bp);
     var height = HEIGHTS[width] || 900;
