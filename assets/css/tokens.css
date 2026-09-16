@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Cancer Grand Challenges — news hub
+   Design tokens
+
+   Values are taken verbatim from the Figma breakpoint collection, resolved
+   at the four design breakpoints: 320 / 768 / 1280 / 1920.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Type
+   Bw Gradual is a licensed face and is not committed to this repo.
+   See assets/fonts/README.md. Poppins is the documented stand-in.
+   -------------------------------------------------------------------------- */
+@font-face { font-family: 'Bw Gradual'; src: url('../fonts/BwGradual-Light.otf')   format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Bw Gradual'; src: url('../fonts/BwGradual-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Bw Gradual'; src: url('../fonts/BwGradual-Medium.otf')  format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Bw Gradual'; src: url('../fonts/BwGradual-Bold.otf')    format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  /* families */
+  --font-strong: 'Bw Gradual', 'Poppins', system-ui, sans-serif;
+  --font-prose:  'Roboto', system-ui, sans-serif;
+
+  /* colour — dark is the default theme */
+  --c-bg: #0B0B0B;
+  --c-white: #FFFFFF;
+  --c-black: #000000;
+  --c-vlgrey: #F2F2F2;
+  --c-stroke: #777777;
+  --c-hairline: rgba(255, 255, 255, 0.25);
+  --c-glass: rgba(0, 0, 0, 0.30);
+  --c-media: #292929;
+  --c-yellow: #FFE534;
+  --c-orange: #FB8D2B;
+  --c-on-accent: #0B0B0B;
+  --c-accent-ink: #FFE534;
+  --logo-filter: none;
+  --glass-blur: blur(25px);
+
+  /* radius */
+  --r-card: 10px;
+  --r-img: 5px;
+  --r-pill: 100px;
+  --r-btn: 200px;
+
+  /* line height */
+  --lh-strong: 1.2;
+  --lh-prose: 1.6;
+  --lh-default: 1.2;
+
+  /* grain + cell graphics: dial the grain up to taste, 0–1 */
+  --grain-op: 0;
+  --cell-display: block;
+
+  /* ---------- 320 (base) ---------- */
+  --sp-3xs: 4px; --sp-2xs: 8px; --sp-xs: 12px; --sp-s: 16px; --sp-m: 24px;
+  --sp-l: 32px; --sp-xl: 48px; --sp-3xl: 64px; --sp-4xl: 96px;
+
+  --grid-content: 272px; --grid-margin: 24px; --grid-gutter: 12px;
+
+  --ty-strong-5: 38px; --ty-strong-4: 26px; --ty-strong-3: 23px;
+  --ty-strong-2: 20px; --ty-strong-1: 18px; --ty-cta: 33px;
+  --ty-prose-1: 14px; --ty-default-1: 14px; --ty-default-2: 13px;
+  --ty-label: 13px; --ty-tag: 14px; --ty-action: 14px; --ty-cta-prose: 15px;
+
+  --label-py: 5px; --label-px: 10px;
+  --tag-py: 4px; --tag-px: 8px; --tag-icon: 26px;
+  --btn-h: 54px; --btn-px: 16px; --btn-gap: 8px;
+  --round-btn: 48px; --icon: 14px;
+  --card-py: 32px; --card-px: 24px;
+  --hero-py: 56px; --section-gap: 96px; --footer-py: 48px;
+  --nav-logo-w: 88px; --nav-links: none; --nav-burger: flex;
+
+  /* grain + cell graphics */
+  --grain-size: 200px; --cell-blur: 9px; --cell-k: 0.1667;
+  --cell1-l: 4%; --cell1-w: 150%;
+  --cell-slot-l: 50%; --cell-slot-w: 92%;
+
+  /* layout switches */
+  --cta-w: 100%; --cta-justify: center;
+  --feat-dir: column; --feat-gap: var(--sp-l); --feat-media: 0 0 auto;
+  --feat-img-h: auto; --feat-img-ratio: 16 / 9; --feat-pad: var(--sp-l) var(--card-px);
+  --tsr-pad: var(--sp-l) var(--card-px);
+  --tsr-first: 10px 10px 0 0; --tsr-last: 0 0 10px 10px; --tsr-gap: 0px;
+  --t1-mr: 0; --t1-cr: 0;
+
+  --news-cols: 1fr; --press-cols: 1fr; --conf-cols: 1fr; --teaser-cols: 1fr;
+  --news-card-flex: 0 0 auto;
+  --news-feat-r: var(--r-card) var(--r-card) 0 0;
+  --news-i1-r: 0; --news-i3-r: 0 0 var(--r-card) var(--r-card);
+  --news-col-ml: 0; --news-col-mt: -1px;
+
+  --band-h: auto; --blob-h: 300px;
+  --band-cols: 1fr; --band-blob-col: 1; --band-copy-col: 1;
+  --band-pl: var(--grid-margin); --band-pr: var(--grid-margin);
+  --arrow-pos: static; --arrow-row: auto; --arrow-justify: center;
+  --arrow-mt: var(--sp-m); --arrow-events: auto;
+
+  --hero-copy: 100%; --event-h: auto; --sponsor-h: auto; --disc-cta-h: auto;
+
+  --flush-first: 10px 10px 0 0; --flush-last: 0 0 10px 10px; --flush-gap: 0px;
+  --split-dir: column;
+  --split-first: 10px 10px 0 0; --split-last: 0 0 10px 10px;
+
+  /* full-bleed helper */
+  --bleed-w: 100vw;
+  --bleed-ml: calc(50% - 50vw);
+  --bleed-mr: 0;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --sp-3xs: 5px; --sp-2xs: 9px; --sp-xs: 14px; --sp-s: 18px; --sp-m: 27px;
+    --sp-l: 36px; --sp-xl: 54px; --sp-3xl: 90px; --sp-4xl: 108px;
+
+    --grid-content: 696px; --grid-margin: 36px; --grid-gutter: 27px;
+
+    --ty-strong-5: 58px; --ty-strong-4: 33px; --ty-strong-3: 28px;
+    --ty-strong-2: 24px; --ty-strong-1: 20px; --ty-cta: 42px;
+    --ty-prose-1: 15px; --ty-default-1: 15px; --ty-default-2: 13px;
+    --ty-label: 13px; --ty-tag: 15px; --ty-action: 15px; --ty-cta-prose: 16px;
+
+    --label-py: 6px; --label-px: 12px;
+    --tag-py: 5px; --tag-px: 10px; --tag-icon: 28px;
+    --btn-h: 58px; --btn-px: 18px; --btn-gap: 9px;
+    --round-btn: 56px; --icon: 15px;
+    --card-py: 36px; --card-px: 27px;
+    --hero-py: 64px; --section-gap: 108px; --footer-py: 72px;
+    --nav-logo-w: 100px;
+
+    --grain-size: 480px; --cell-blur: 15px; --cell-k: 0.4;
+    --cell1-l: 20%; --cell1-w: 105%;
+    --cell-slot-l: 4%; --cell-slot-w: 64%;
+
+    --cta-w: auto; --cta-justify: flex-start;
+
+    --conf-cols: minmax(0, 1fr) minmax(0, 1fr);
+
+    --blob-h: 400px;
+    --arrow-pos: absolute; --arrow-row: 1; --arrow-justify: space-between;
+    --arrow-mt: 0; --arrow-events: none;
+
+    --event-h: calc(418px * var(--cell-k));
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --sp-3xs: 5px; --sp-2xs: 10px; --sp-xs: 15px; --sp-s: 20px; --sp-m: 30px;
+    --sp-l: 40px; --sp-xl: 60px; --sp-3xl: 100px; --sp-4xl: 120px;
+
+    --grid-content: 1120px; --grid-margin: 80px; --grid-gutter: 40px;
+
+    --ty-strong-5: 86px; --ty-strong-4: 42px; --ty-strong-3: 35px;
+    --ty-strong-2: 29px; --ty-strong-1: 24px; --ty-cta: 53px;
+    --ty-prose-1: 16px; --ty-default-1: 16px; --ty-default-2: 14px;
+    --ty-label: 14px; --ty-tag: 16px; --ty-action: 16px; --ty-cta-prose: 18px;
+
+    --label-py: 6px; --label-px: 13px;
+    --tag-py: 6px; --tag-px: 12px; --tag-icon: 30px;
+    --btn-h: 60px; --btn-px: 20px; --btn-gap: 10px;
+    --round-btn: 60px; --icon: 16px;
+    --card-py: 40px; --card-px: 30px;
+    --hero-py: 72px; --section-gap: 120px; --footer-py: 90px;
+    --nav-logo-w: 112px; --nav-links: flex; --nav-burger: none;
+
+    --grain-size: 800px; --cell-blur: 19px; --cell-k: 0.6667;
+    --cell1-l: 46.56%; --cell1-w: 63.33%;
+    --cell-slot-l: 2%; --cell-slot-w: 58%;
+
+    --tsr-pad: var(--sp-xl) var(--sp-l);
+    --tsr-first: 10px 0 0 10px; --tsr-last: 0 10px 10px 0;
+
+    --news-cols: minmax(0, 1fr) minmax(0, 1fr);
+    --press-cols: repeat(3, minmax(0, 1fr));
+    --teaser-cols: repeat(2, minmax(0, 1fr));
+    --news-card-flex: 1 1 0;
+    --news-feat-r: var(--r-card) 0 0 var(--r-card);
+    --news-i1-r: 0 var(--r-card) 0 0;
+    --news-i3-r: 0 0 var(--r-card) 0;
+    --news-col-ml: -1px; --news-col-mt: 0;
+
+    --band-h: calc(546px * var(--cell-k)); --blob-h: var(--band-h);
+    --band-cols: minmax(0, 1fr) minmax(0, 1fr); --band-copy-col: 2;
+    --band-pl: 0px;
+    --band-pr: calc(var(--grid-margin) + var(--round-btn) + var(--sp-m));
+
+    --hero-copy: 733px;
+    --sponsor-h: calc(336px * var(--cell-k));
+    --disc-cta-h: calc(576px * var(--cell-k));
+
+    --flush-first: 10px 0 0 10px; --flush-last: 0 10px 10px 0;
+    --split-dir: row;
+    --split-first: 10px 0 0 10px; --split-last: 0 10px 10px 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --sp-3xs: 6px; --sp-2xs: 11px; --sp-xs: 17px; --sp-s: 22px; --sp-m: 33px;
+    --sp-l: 44px; --sp-xl: 66px; --sp-3xl: 110px; --sp-4xl: 132px;
+
+    --grid-content: 1700px; --grid-margin: 110px; --grid-gutter: 66px;
+
+    --ty-strong-5: 116px; --ty-strong-4: 53px; --ty-strong-3: 43px;
+    --ty-strong-2: 34px; --ty-strong-1: 28px; --ty-cta: 67px;
+    --ty-prose-1: 18px; --ty-default-1: 18px; --ty-default-2: 14px;
+    --ty-label: 14px; --ty-tag: 18px; --ty-action: 18px; --ty-cta-prose: 22px;
+
+    --label-py: 7px; --label-px: 14px;
+    --tag-py: 6px; --tag-px: 13px; --tag-icon: 34px;
+    --btn-h: 66px; --btn-px: 22px; --btn-gap: 11px;
+    --round-btn: 66px; --icon: 17px;
+    --card-py: 44px; --card-px: 44px;
+    --hero-py: 80px; --section-gap: 132px; --footer-py: 110px;
+    --nav-logo-w: 125px;
+
+    --grain-size: 1200px; --cell-blur: 24px; --cell-k: 1;
+    --cell-slot-w: 56%;
+
+    --hero-copy: 1111px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Light theme — an ink/paper flip of the same token set.
+   Set data-theme="light" on <html>. Yellow has no contrast on paper, so the
+   accent becomes the brand orange, darkened again where it is used as type.
+   -------------------------------------------------------------------------- */
+:root[data-theme='light'] {
+  --c-bg: #F5F4F1;
+  --c-white: #0B0B0B;
+  --c-black: #FFFFFF;
+  --c-vlgrey: #3D3D3D;
+  --c-stroke: #C4C4C0;
+  --c-hairline: rgba(0, 0, 0, 0.20);
+  --c-glass: rgba(255, 255, 255, 0.30);
+  --c-media: #E4E3DF;
+  --c-yellow: #FB8D2B;
+  --c-accent-ink: #9C4A05;
+  --logo-filter: invert(1);
+}

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+
+# Bw Gradual is a licensed face — keep the binaries out of the repo
+assets/fonts/*.otf
+assets/fonts/*.ttf
+assets/fonts/*.woff
+assets/fonts/*.woff2
