@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News and events | Cancer Grand Challenges</title>
+<meta name="description" content="Explore Cancer Grand Challenges news, press releases, the research library and upcoming conferences.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+<defs>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M 10.675 10 L 7.6 13.075 L 9 14.5 L 13.5 10 L 9 5.5 L 7.6 6.925 L 10.675 10 Z M 10 20 C 8.617 20 7.317 19.738 6.1 19.213 C 4.883 18.688 3.825 17.975 2.925 17.075 C 2.025 16.175 1.313 15.117 0.788 13.9 C 0.263 12.683 0 11.383 0 10 C 0 8.617 0.263 7.317 0.788 6.1 C 1.313 4.883 2.025 3.825 2.925 2.925 C 3.825 2.025 4.883 1.313 6.1 0.788 C 7.317 0.263 8.617 0 10 0 C 11.383 0 12.683 0.263 13.9 0.788 C 15.117 1.313 16.175 2.025 17.075 2.925 C 17.975 3.825 18.688 4.883 19.213 6.1 C 19.738 7.317 20 8.617 20 10 C 20 11.383 19.738 12.683 19.213 13.9 C 18.688 15.117 17.975 16.175 17.075 17.075 C 16.175 17.975 15.117 18.688 13.9 19.213 C 12.683 19.738 11.383 20 10 20 Z M 10 18 C 12.233 18 14.125 17.225 15.675 15.675 C 17.225 14.125 18 12.233 18 10 C 18 7.767 17.225 5.875 15.675 4.325 C 14.125 2.775 12.233 2 10 2 C 7.767 2 5.875 2.775 4.325 4.325 C 2.775 5.875 2 7.767 2 10 C 2 12.233 2.775 14.125 4.325 15.675 C 5.875 17.225 7.767 18 10 18 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(0 1 -1 0 22 2)"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M 16.6 18 L 10.3 11.7 C 9.8 12.1 9.225 12.417 8.575 12.65 C 7.925 12.883 7.233 13 6.5 13 C 4.683 13 3.146 12.371 1.888 11.113 C 0.629 9.854 0 8.317 0 6.5 C 0 4.683 0.629 3.146 1.888 1.888 C 3.146 0.629 4.683 0 6.5 0 C 8.317 0 9.854 0.629 11.113 1.888 C 12.371 3.146 13 4.683 13 6.5 C 13 7.233 12.883 7.925 12.65 8.575 C 12.417 9.225 12.1 9.8 11.7 10.3 L 18 16.6 L 16.6 18 Z M 6.5 11 C 7.75 11 8.813 10.563 9.688 9.688 C 10.563 8.813 11 7.75 11 6.5 C 11 5.25 10.563 4.188 9.688 3.313 C 8.813 2.438 7.75 2 6.5 2 C 5.25 2 4.188 2.438 3.313 3.313 C 2.438 4.188 2 5.25 2 6.5 C 2 7.75 2.438 8.813 3.313 9.688 C 4.188 10.563 5.25 11 6.5 11 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 3 3)"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M 6 20 L 6 3.825 L 1.4 8.4 L 0 7 L 7 0 L 14 7 L 12.6 8.425 L 8 3.825 L 8 20 L 6 20 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(0 1 -1 0 22 5)"/></symbol>
+<symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M 1.775 20 L 0 18.225 L 8.225 10 L 0 1.775 L 1.775 0 L 11.775 10 L 1.775 20 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 6.112 1.887)"/></symbol>
+<symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="M 1.775 20 L 0 18.225 L 8.225 10 L 0 1.775 L 1.775 0 L 11.775 10 L 1.775 20 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(-1 0 0 -1 17.887 21.887)"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M 1.775 20 L 0 18.225 L 8.225 10 L 0 1.775 L 1.775 0 L 11.775 10 L 1.775 20 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(0 1 -1 0 22 6)"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><path d="M 2 16 C 1.45 16 0.979 15.804 0.588 15.412 C 0.196 15.021 0 14.55 0 14 L 0 2 C 0 1.45 0.196 0.979 0.588 0.588 C 0.979 0.196 1.45 0 2 0 L 18 0 C 18.55 0 19.021 0.196 19.413 0.588 C 19.804 0.979 20 1.45 20 2 L 20 14 C 20 14.55 19.804 15.021 19.413 15.412 C 19.021 15.804 18.55 16 18 16 L 2 16 Z M 10 9 L 2 4 L 2 14 L 18 14 L 18 4 L 10 9 Z M 10 7 L 18 2 L 2 2 L 10 7 Z M 2 4 L 2 2 L 2 14 L 2 4 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 2 4)"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M 22 20 L 17.138 20 L 17.138 12.969 C 17.138 11.129 16.377 9.873 14.705 9.873 C 13.425 9.873 12.714 10.72 12.383 11.537 C 12.259 11.831 12.278 12.239 12.278 12.648 L 12.278 20 L 7.461 20 C 7.461 20 7.523 7.546 7.461 6.414 L 12.278 6.414 L 12.278 8.546 C 12.563 7.614 14.102 6.283 16.558 6.283 C 19.606 6.283 22 8.237 22 12.445 L 22 20 Z M 2.59 4.714 L 2.559 4.714 C 1.006 4.714 0 3.675 0 2.359 C 0 1.017 1.036 0 2.619 0 C 4.201 0 5.174 1.014 5.205 2.355 C 5.205 3.672 4.201 4.714 2.59 4.714 Z M 0.555 6.414 L 4.843 6.414 L 4.843 20 L 0.555 20 L 0.555 6.414 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 1 2)"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M 11.641 8.464 L 18.922 0 L 17.197 0 L 10.874 7.349 L 5.824 0 L 0 0 L 7.636 11.114 L 0 19.99 L 1.726 19.99 L 8.402 12.228 L 13.735 19.99 L 19.56 19.99 L 11.64 8.464 L 11.641 8.464 Z M 9.277 11.212 L 8.504 10.105 L 2.347 1.299 L 4.998 1.299 L 9.966 8.406 L 10.74 9.512 L 17.198 18.75 L 14.547 18.75 L 9.277 11.212 L 9.277 11.212 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 2 2)"/></symbol>
+<symbol id="i-youtube" viewBox="0 0 24 24"><path d="M 23.5 2.624 C 23.224 1.59 22.412 0.778 21.378 0.502 C 19.505 0 12 0 12 0 C 12 0 4.495 0 2.624 0.502 C 1.59 0.778 0.778 1.59 0.502 2.624 C 0 4.495 0 8.4 0 8.4 C 0 8.4 0 12.306 0.502 14.177 C 0.778 15.21 1.59 16.022 2.624 16.299 C 4.495 16.801 12 16.801 12 16.801 C 12 16.801 19.505 16.801 21.376 16.299 C 22.41 16.022 23.222 15.21 23.498 14.177 C 24 12.306 24 8.4 24 8.4 C 24 8.4 24 4.495 23.5 2.624 Z M 9.6 12 L 9.6 4.801 L 15.835 8.4 L 9.6 12 Z" fill="currentColor" fill-rule="evenodd" transform="matrix(1 0 0 1 0 4)"/></symbol>
+</defs>
+</svg>
+
+<!-- The gradient every cell graphic is filled with -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute" focusable="false"><defs><linearGradient id="cgcCell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE534" /><stop offset="0.125" stop-color="#FB8D2B" /><stop offset="0.255" stop-color="#FA5A38" /><stop offset="0.395" stop-color="#FA3048" /><stop offset="0.535" stop-color="#A771CB" /><stop offset="0.685" stop-color="#7D81D6" /><stop offset="0.84" stop-color="#49A1E8" /><stop offset="1" stop-color="#2FCEF8" /></linearGradient></defs></svg>
+
+<div class="page">
+
+  <div class="page__grain" aria-hidden="true"></div>
+
+  <div class="cell-layer" aria-hidden="true" data-cell-layer>
+    <svg viewBox="0 0 800 711.522" aria-hidden="true" class="cell cell--hero" style="left:var(--cell1-l);top:0;width:var(--cell1-w);opacity:1"><path d="M 417.198 0.49 C 520.851 -5.65 619.255 46.531 691.494 121.118 C 762.581 194.514 804.001 293.328 799.694 395.414 C 795.549 493.678 745.294 585.087 669.288 647.504 C 599.766 704.596 506.839 717.086 417.198 709.525 C 335.804 702.661 269.559 657.445 204.323 608.29 C 122.726 546.806 7.194 497.351 0.329 395.414 C -6.632 292.059 98.377 223.038 173.579 151.795 C 245.721 83.45 317.996 6.366 417.198 0.49 Z" fill="url(#cgcCell)" /><path d="M 208.599 0.245 C 260.426 -2.825 309.628 23.266 345.747 60.559 C 381.29 97.257 402 146.664 399.847 197.707 C 397.774 246.839 372.647 292.544 334.644 323.752 C 299.883 352.298 253.42 358.543 208.599 354.763 C 167.902 351.33 134.779 328.723 102.161 304.145 C 61.363 273.403 3.597 248.676 0.164 197.707 C -3.316 146.029 49.189 111.519 86.789 75.898 C 122.861 41.725 158.998 3.183 208.599 0.245 Z" fill="var(--c-bg)" transform="translate(200 178)" /></svg>
+    <svg viewBox="0 0 800 837.013" aria-hidden="true" class="cell" style="left:-8.07%;top:8.33%;width:26.77%;opacity:0.5"><path d="M 410.833 0.093 C 519.711 2.875 611.434 73.735 684.695 154.328 C 753.955 230.518 800.894 325.228 799.987 428.19 C 799.088 530.291 750.517 623.51 679.915 697.272 C 607.512 772.915 515.188 826.159 410.833 834.759 C 296.97 844.143 174.527 826.066 93.415 745.608 C 12.079 664.928 -4.556 542.62 0.96 428.19 C 6.179 319.908 47.636 218.269 122.607 139.964 C 199.382 59.776 299.853 -2.743 410.833 0.093 Z" fill="url(#cgcCell)" /><path d="M 205.416 0.046 C 259.856 1.438 305.717 36.868 342.347 77.164 C 376.977 115.259 400.447 162.614 399.994 214.095 C 399.544 265.145 375.258 311.755 339.957 348.636 C 303.756 386.457 257.594 413.079 205.416 417.379 C 148.485 422.071 87.263 413.033 46.707 372.804 C 6.04 332.464 -2.278 271.31 0.48 214.095 C 3.09 159.954 23.818 109.134 61.304 69.982 C 99.691 29.888 149.927 -1.372 205.416 0.046 Z" fill="var(--c-bg)" transform="translate(200 209.544)" /></svg>
+    <svg viewBox="0 0 800 947.909" aria-hidden="true" class="cell" style="left:64.74%;top:17.69%;width:14.74%;opacity:0.58"><path d="M 391.314 2.764 C 508.416 15.94 591.903 110.345 668.285 200.08 C 736.698 280.453 784.982 371.982 795.024 477.051 C 806.311 595.151 804.046 722.495 726.82 812.557 C 645.22 907.72 516.664 946.436 391.314 947.86 C 264.438 949.302 127.541 919.204 48.097 820.267 C -26.75 727.055 13.955 596.592 13.265 477.051 C 12.568 356.266 -31.176 224.301 44.112 129.848 C 123.969 29.662 263.998 -11.562 391.314 2.764 Z" fill="url(#cgcCell)" /><path d="M 195.657 1.382 C 254.208 7.97 295.952 55.172 334.142 100.04 C 368.349 140.227 392.491 185.991 397.512 238.525 C 403.155 297.575 402.023 361.248 363.41 406.279 C 322.61 453.86 258.332 473.218 195.657 473.93 C 132.219 474.651 63.77 459.602 24.049 410.134 C -13.375 363.528 6.978 298.296 6.633 238.525 C 6.284 178.133 -15.588 112.151 22.056 64.924 C 61.985 14.831 131.999 -5.781 195.657 1.382 Z" fill="var(--c-bg)" transform="translate(200 237)" /></svg>
+    <svg viewBox="0 0 800 837.013" aria-hidden="true" class="cell" style="left:16.82%;top:33.1%;width:23.75%;opacity:0.58"><path d="M 410.833 0.093 C 519.711 2.875 611.434 73.735 684.695 154.328 C 753.955 230.518 800.894 325.228 799.987 428.19 C 799.088 530.291 750.517 623.51 679.915 697.272 C 607.512 772.915 515.188 826.159 410.833 834.759 C 296.97 844.143 174.527 826.066 93.415 745.608 C 12.079 664.928 -4.556 542.62 0.96 428.19 C 6.179 319.908 47.636 218.269 122.607 139.964 C 199.382 59.776 299.853 -2.743 410.833 0.093 Z" fill="url(#cgcCell)" /><path d="M 205.416 0.046 C 259.856 1.438 305.717 36.868 342.347 77.164 C 376.977 115.259 400.447 162.614 399.994 214.095 C 399.544 265.145 375.258 311.755 339.957 348.636 C 303.756 386.457 257.594 413.079 205.416 417.379 C 148.485 422.071 87.263 413.033 46.707 372.804 C 6.04 332.464 -2.278 271.31 0.48 214.095 C 3.09 159.954 23.818 109.134 61.304 69.982 C 99.691 29.888 149.927 -1.372 205.416 0.046 Z" fill="var(--c-bg)" transform="translate(200 209.544)" /></svg>
+    <svg viewBox="0 0 800 710.562" aria-hidden="true" class="cell" style="left:69.27%;top:44.9%;width:40.63%;opacity:0.58"><path d="M 406.969 0.031 C 498.861 -0.395 593.807 2.755 665.119 60.711 C 743.353 124.293 793.435 218.218 799.273 318.862 C 805.443 425.232 772.406 533.616 696.911 608.804 C 621.546 683.864 513.085 716.865 406.969 709.574 C 307.434 702.735 226.279 640.617 154.309 571.521 C 80.305 500.473 0.631 421.448 0.004 318.862 C -0.625 215.907 70.155 126.589 151.201 63.094 C 223.059 6.799 315.686 0.454 406.969 0.031 Z" fill="url(#cgcCell)" /><path d="M 203.484 0.016 C 249.43 -0.197 296.904 1.378 332.559 30.356 C 371.677 62.147 396.718 109.109 399.637 159.431 C 402.722 212.616 386.203 266.808 348.456 304.402 C 310.773 341.932 256.543 358.433 203.484 354.787 C 153.717 351.367 113.139 320.309 77.154 285.761 C 40.153 250.237 0.316 210.724 0.002 159.431 C -0.313 107.953 35.077 63.295 75.601 31.547 C 111.529 3.399 157.843 0.227 203.484 0.016 Z" fill="var(--c-bg)" transform="translate(200 178)" /></svg>
+    <svg viewBox="0 0 800 901.322" aria-hidden="true" class="cell" style="left:-11.98%;top:61.3%;width:36.46%;opacity:0.5"><path d="M 359.573 0.11 C 469.157 -4.153 532.13 116.672 609.058 194.833 C 684.95 271.941 782.402 337.087 796.775 444.319 C 812.652 562.773 768.974 684.741 686.291 771.037 C 602.029 858.981 481.157 907.806 359.573 900.628 C 243.893 893.798 140.536 825.994 69.281 734.61 C 5.871 653.288 -7.924 546.775 3.773 444.319 C 14.09 353.952 71.911 284.507 128.771 213.518 C 196.868 128.5 250.728 4.344 359.573 0.11 Z" fill="url(#cgcCell)" /><path d="M 179.786 0.055 C 234.579 -2.077 266.065 58.336 304.529 97.416 C 342.475 135.971 391.201 168.543 398.387 222.159 C 406.326 281.386 384.487 342.371 343.146 385.519 C 301.015 429.491 240.578 453.903 179.786 450.314 C 121.947 446.899 70.268 412.997 34.641 367.305 C 2.936 326.644 -3.962 273.387 1.887 222.159 C 7.045 176.976 35.955 142.253 64.386 106.759 C 98.434 64.25 125.364 2.172 179.786 0.055 Z" fill="var(--c-bg)" transform="translate(200 225.891)" /></svg>
+    <svg viewBox="0 0 800 620.15" aria-hidden="true" class="cell" style="left:66.67%;top:77.43%;width:33.85%;opacity:0.55"><path d="M 414.086 3.083 C 504.24 -2.954 599.548 -5.7 670.547 50.186 C 748.74 111.734 796.309 207.198 799.746 306.648 C 803.292 409.272 769.895 518.34 688.908 581.47 C 613.47 640.276 509.223 617.181 414.086 607.277 C 332.704 598.805 257.301 577.715 191.089 529.645 C 108.74 469.859 0.29 408.411 0.001 306.648 C -0.289 204.835 107.703 142.573 189.815 82.377 C 256.294 33.641 331.841 8.59 414.086 3.083 Z" fill="url(#cgcCell)" /><path d="M 207.043 1.541 C 252.12 -1.477 299.774 -2.85 335.274 25.093 C 374.37 55.867 398.154 103.599 399.873 153.324 C 401.646 204.636 384.947 259.17 344.454 290.735 C 306.735 320.138 254.611 308.591 207.043 303.639 C 166.352 299.402 128.651 288.858 95.545 264.822 C 54.37 234.929 0.145 204.205 0 153.324 C -0.145 102.418 53.851 71.286 94.907 41.188 C 128.147 16.821 165.92 4.295 207.043 1.541 Z" fill="var(--c-bg)" transform="translate(200 155)" /></svg>
+    <svg viewBox="0 0 800 634.583" aria-hidden="true" class="cell" style="left:9.38%;top:92.39%;width:30.21%;opacity:0.4"><path d="M 362.789 0.023 C 449.551 -1.072 527.163 37.152 596.961 88.699 C 683.344 152.495 803.033 215.528 799.941 322.871 C 796.858 429.948 671.27 482.022 583.851 543.932 C 516.511 591.623 445.115 626.848 362.789 632.462 C 273.052 638.582 177.76 634.712 109.372 576.288 C 36.694 514.198 -4.567 418.33 0.403 322.871 C 5.173 231.244 65.947 155.568 134.454 94.536 C 198.394 37.572 277.163 1.103 362.789 0.023 Z" fill="url(#cgcCell)" /><path d="M 181.395 0.011 C 224.776 -0.536 263.582 18.576 298.48 44.35 C 341.672 76.248 401.516 107.764 399.971 161.435 C 398.429 214.974 335.635 241.011 291.925 271.966 C 258.255 295.811 222.558 313.424 181.395 316.231 C 136.526 319.291 88.88 317.356 54.686 288.144 C 18.347 257.099 -2.283 209.165 0.202 161.435 C 2.587 115.622 32.974 77.784 67.227 47.268 C 99.197 18.786 138.581 0.552 181.395 0.011 Z" fill="var(--c-bg)" transform="translate(200 148)" /></svg>
+    <svg viewBox="0 0 800 710.562" aria-hidden="true" class="cell" style="left:38.02%;top:53.6%;width:19.79%;opacity:0.55"><path d="M 406.969 0.031 C 498.861 -0.395 593.807 2.755 665.119 60.711 C 743.353 124.293 793.435 218.218 799.273 318.862 C 805.443 425.232 772.406 533.616 696.911 608.804 C 621.546 683.864 513.085 716.865 406.969 709.574 C 307.434 702.735 226.279 640.617 154.309 571.521 C 80.305 500.473 0.631 421.448 0.004 318.862 C -0.625 215.907 70.155 126.589 151.201 63.094 C 223.059 6.799 315.686 0.454 406.969 0.031 Z" fill="url(#cgcCell)" /><path d="M 203.484 0.016 C 249.43 -0.197 296.904 1.378 332.559 30.356 C 371.677 62.147 396.718 109.109 399.637 159.431 C 402.722 212.616 386.203 266.808 348.456 304.402 C 310.773 341.932 256.543 358.433 203.484 354.787 C 153.717 351.367 113.139 320.309 77.154 285.761 C 40.153 250.237 0.316 210.724 0.002 159.431 C -0.313 107.953 35.077 63.295 75.601 31.547 C 111.529 3.399 157.843 0.227 203.484 0.016 Z" fill="var(--c-bg)" transform="translate(200 178)" /></svg>
+    <svg viewBox="0 0 800 710.562" aria-hidden="true" class="cell" style="left:-6.25%;top:40.2%;width:22.92%;opacity:0.48"><path d="M 406.969 0.031 C 498.861 -0.395 593.807 2.755 665.119 60.711 C 743.353 124.293 793.435 218.218 799.273 318.862 C 805.443 425.232 772.406 533.616 696.911 608.804 C 621.546 683.864 513.085 716.865 406.969 709.574 C 307.434 702.735 226.279 640.617 154.309 571.521 C 80.305 500.473 0.631 421.448 0.004 318.862 C -0.625 215.907 70.155 126.589 151.201 63.094 C 223.059 6.799 315.686 0.454 406.969 0.031 Z" fill="url(#cgcCell)" /><path d="M 203.484 0.016 C 249.43 -0.197 296.904 1.378 332.559 30.356 C 371.677 62.147 396.718 109.109 399.637 159.431 C 402.722 212.616 386.203 266.808 348.456 304.402 C 310.773 341.932 256.543 358.433 203.484 354.787 C 153.717 351.367 113.139 320.309 77.154 285.761 C 40.153 250.237 0.316 210.724 0.002 159.431 C -0.313 107.953 35.077 63.295 75.601 31.547 C 111.529 3.399 157.843 0.227 203.484 0.016 Z" fill="var(--c-bg)" transform="translate(200 178)" /></svg>
+    <svg viewBox="0 0 800 947.909" aria-hidden="true" class="cell" style="left:22.4%;top:69.5%;width:17.19%;opacity:0.46"><path d="M 391.314 2.764 C 508.416 15.94 591.903 110.345 668.285 200.08 C 736.698 280.453 784.982 371.982 795.024 477.051 C 806.311 595.151 804.046 722.495 726.82 812.557 C 645.22 907.72 516.664 946.436 391.314 947.86 C 264.438 949.302 127.541 919.204 48.097 820.267 C -26.75 727.055 13.955 596.592 13.265 477.051 C 12.568 356.266 -31.176 224.301 44.112 129.848 C 123.969 29.662 263.998 -11.562 391.314 2.764 Z" fill="url(#cgcCell)" /><path d="M 195.657 1.382 C 254.208 7.97 295.952 55.172 334.142 100.04 C 368.349 140.227 392.491 185.991 397.512 238.525 C 403.155 297.575 402.023 361.248 363.41 406.279 C 322.61 453.86 258.332 473.218 195.657 473.93 C 132.219 474.651 63.77 459.602 24.049 410.134 C -13.375 363.528 6.978 298.296 6.633 238.525 C 6.284 178.133 -15.588 112.151 22.056 64.924 C 61.985 14.831 131.999 -5.781 195.657 1.382 Z" fill="var(--c-bg)" transform="translate(200 237)" /></svg>
+    <svg viewBox="0 0 800 710.562" aria-hidden="true" class="cell" style="left:40.1%;top:85.2%;width:26.04%;opacity:0.58"><path d="M 406.969 0.031 C 498.861 -0.395 593.807 2.755 665.119 60.711 C 743.353 124.293 793.435 218.218 799.273 318.862 C 805.443 425.232 772.406 533.616 696.911 608.804 C 621.546 683.864 513.085 716.865 406.969 709.574 C 307.434 702.735 226.279 640.617 154.309 571.521 C 80.305 500.473 0.631 421.448 0.004 318.862 C -0.625 215.907 70.155 126.589 151.201 63.094 C 223.059 6.799 315.686 0.454 406.969 0.031 Z" fill="url(#cgcCell)" /><path d="M 203.484 0.016 C 249.43 -0.197 296.904 1.378 332.559 30.356 C 371.677 62.147 396.718 109.109 399.637 159.431 C 402.722 212.616 386.203 266.808 348.456 304.402 C 310.773 341.932 256.543 358.433 203.484 354.787 C 153.717 351.367 113.139 320.309 77.154 285.761 C 40.153 250.237 0.316 210.724 0.002 159.431 C -0.313 107.953 35.077 63.295 75.601 31.547 C 111.529 3.399 157.843 0.227 203.484 0.016 Z" fill="var(--c-bg)" transform="translate(200 178)" /></svg>
+  </div>
+
+  <!-- ====================================================================
+       Header
+       ==================================================================== -->
+  <header class="site-header">
+    <a class="site-header__logo" href="/">
+      <img src="assets/img/cgc-logo.png" alt="Cancer Grand Challenges" width="878" height="492">
+    </a>
+
+    <nav class="nav-pill" aria-label="Main">
+      <a class="nav-pill__link" href="#">Challenges <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></a>
+      <a class="nav-pill__link" href="#">Impact <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></a>
+      <a class="nav-pill__link" href="#">Partners and donors <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></a>
+      <a class="nav-pill__link" href="#" aria-current="page">News and events</a>
+      <a class="nav-pill__link" href="#">About <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" aria-label="Search">
+        <svg class="icon icon--lg" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <button class="burger" type="button" aria-label="Main menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       Breadcrumb + hero
+       ==================================================================== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a class="breadcrumb__link" href="#">News and events <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+  </nav>
+
+  <section class="hero">
+    <h1 class="hero__title">News and events</h1>
+    <p class="hero__standfirst">Explore our news, press, research library and upcoming events that encompass our discoveries and the progress we're making toward our mission.</p>
+  </section>
+
+  <main class="content" id="main">
+
+    <!-- ==================================================================
+         News from active challenges
+         ================================================================== -->
+    <section class="section" aria-labelledby="news-heading">
+      <div class="section-head section-head--cta">
+        <div class="section-head__copy">
+          <h2 class="section-head__title" id="news-heading">News from active challenges</h2>
+          <p class="section-head__intro">Discover our latest challenges which have funded teams actively addressing them.</p>
+        </div>
+        <a class="btn btn--section" href="#">Explore all <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      </div>
+
+      <div class="news-grid">
+        <article class="teaser teaser--featured">
+          <div class="teaser__media-col">
+            <div class="teaser__media">
+              <img src="assets/img/news-featured.jpg" alt="" width="729" height="409" loading="lazy">
+            </div>
+          </div>
+          <div class="teaser__body">
+            <div class="meta">
+              <span class="meta__item meta__item--type">News</span>
+              <span class="meta__item">23 April 2025</span>
+              <span class="meta__item">10 min read</span>
+            </div>
+            <h3 class="teaser__title"><a href="#">Global characterisation of mutational signatures reveals bacterial toxin as a potential driver of early-onset colorectal cancer</a></h3>
+            <p class="teaser__summary">New research links a bacterial toxin to the rising incidence of colorectal cancer in people under 50.</p>
+            <div class="tags">
+              <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Cachexia</span>
+              <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>PRECISION</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="news-list">
+          <article class="teaser teaser--list">
+            <div class="meta">
+              <span class="meta__item meta__item--type">News</span>
+              <span class="meta__item">20 June 2025</span>
+              <span class="meta__item">3 min read</span>
+            </div>
+            <h3 class="teaser__title"><a href="#">Teaching the immune system to see more: a multi-target approach to childhood brain tumours</a></h3>
+            <div class="tags tags--bottom">
+              <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Solid tumours in children</span>
+              <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>NexTGen</span>
+            </div>
+          </article>
+
+          <article class="teaser teaser--list">
+            <div class="meta">
+              <span class="meta__item meta__item--type">News</span>
+              <span class="meta__item">24 June 2025</span>
+              <span class="meta__item">6 min read</span>
+            </div>
+            <h3 class="teaser__title"><a href="#">Designing accessible immunotherapies with AI</a></h3>
+            <div class="tags tags--bottom">
+              <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>T-cell receptors</span>
+              <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>MATCHMAKERS</span>
+            </div>
+          </article>
+
+          <article class="teaser teaser--list">
+            <div class="meta">
+              <span class="meta__item meta__item--type">News</span>
+              <span class="meta__item">15 January 2025</span>
+              <span class="meta__item">8 min read</span>
+            </div>
+            <h3 class="teaser__title"><a href="#">Unravelling the immune system's antigen proofreading process</a></h3>
+            <div class="tags tags--bottom">
+              <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Solid tumours in children</span>
+              <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>NexTGen</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Press releases
+         ================================================================== -->
+    <section class="section" aria-labelledby="press-heading">
+      <div class="section-head section-head--cta">
+        <div class="section-head__copy">
+          <h2 class="section-head__title" id="press-heading">Press releases</h2>
+          <p class="section-head__intro">See the latest media coverage highlighting Cancer Grand Challenges.</p>
+        </div>
+        <a class="btn btn--section" href="#">Explore all <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      </div>
+
+      <div class="press-grid">
+        <article class="teaser teaser--press">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Press</span>
+            <span class="meta__item">30 July 2025</span>
+            <span class="meta__item">National Institutes of Health</span>
+          </div>
+          <h3 class="teaser__title"><a href="#">Lung tumour signals may tamp down food intake</a></h3>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Cachexia</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>CANCAN</span>
+          </div>
+        </article>
+
+        <article class="teaser teaser--press">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Press</span>
+            <span class="meta__item">18 June 2025</span>
+            <span class="meta__item">The Guardian</span>
+          </div>
+          <h3 class="teaser__title"><a href="#">Global team maps the earliest signs of childhood brain tumours</a></h3>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Paediatric cancers</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>NexTGen</span>
+          </div>
+        </article>
+
+        <article class="teaser teaser--press">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Press</span>
+            <span class="meta__item">03 May 2025</span>
+            <span class="meta__item">Nature News</span>
+          </div>
+          <h3 class="teaser__title"><a href="#">AI-designed immunotherapies move a step closer to the clinic</a></h3>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Protein design</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>PROTEUS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Upcoming conferences
+         ================================================================== -->
+    <section class="section" aria-labelledby="conferences-heading">
+      <div class="section-head">
+        <h2 class="section-head__title" id="conferences-heading">Upcoming conferences</h2>
+        <p class="section-head__intro">Our conferences embody the Cancer Grand Challenges ethos: a unique opportunity to bring together world-leading researchers from diverse disciplines to share cutting-edge research, and inspire innovative, bold thinking.</p>
+      </div>
+
+      <article class="event">
+        <div class="event__media">
+          <div class="event__image" aria-hidden="true"></div>
+          <span class="event__badge">SOLD OUT</span>
+        </div>
+        <div class="event__body">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Event</span>
+            <span class="meta__item">01 – 03 September 2026</span>
+            <span class="meta__item">The Royal Society, UK</span>
+          </div>
+          <h3 class="event__title teaser__title"><a href="#">Spatial biology</a></h3>
+          <p class="teaser__summary">This landmark conference will bring together global leaders in cancer research, technology development and clinical practice to explore the frontiers of spatial biology.</p>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>3D tumour mapping</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>IMAXT</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>Rosetta</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="promo promo--sponsor">
+        <div class="promo__panel">
+          <h3 class="promo__title">Want to become a sponsor?</h3>
+        </div>
+        <div class="promo__panel promo__panel--copy">
+          <p class="promo__body">Be part of the future of cancer research. Connect your organisation with some of the leading names in cancer research by sponsoring a Cancer Grand Challenges Conference.</p>
+          <a class="btn btn--on-accent" href="#">Find out more <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Changing the landscape — challenge carousel
+         ================================================================== -->
+    <section class="section" aria-labelledby="landscape-heading">
+      <div class="section-head">
+        <h2 class="section-head__title" id="landscape-heading">Changing the landscape of cancer research</h2>
+        <p class="section-head__intro">From transforming our understanding of the role of mutations in cancer to developing cutting-edge technologies to comprehensively map tumours, Cancer Grand Challenges teams are driving impact against some of the toughest challenges in cancer.</p>
+      </div>
+
+      <div class="band" data-carousel>
+        <div class="cell-stage" aria-hidden="true">
+          <div class="cell-slot" aria-hidden="true" data-cell-slot="0">
+          <div class="cell-slot__inner">
+          <svg viewBox="0 0 800 965.477" class="cell-slot__svg cell-slot__svg--soft"><path d="M 390.429 2.308 C 514.953 19.034 570.996 157.9 649.403 256.076 C 714.177 337.182 797.306 411.286 799.925 515.05 C 802.591 620.687 733.972 709.314 662.813 787.434 C 586.99 870.674 502.739 956.57 390.429 964.602 C 272.155 973.061 153.046 919.601 76.083 829.396 C 3.689 744.545 11.134 626.505 6.873 515.05 C 2.343 396.555 -19.936 270.668 51.094 175.714 C 130.192 69.975 259.553 -15.27 390.429 2.308 Z" fill="url(#cgcCell)" /><path d="M 195.215 1.154 C 257.477 9.517 285.498 78.95 324.701 128.038 C 357.089 168.591 398.653 205.643 399.962 257.525 C 401.295 310.343 366.986 354.657 331.407 393.717 C 293.495 435.337 251.369 478.285 195.215 482.301 C 136.077 486.531 76.523 459.801 38.042 414.698 C 1.845 372.273 5.567 313.253 3.437 257.525 C 1.172 198.277 -9.968 135.334 25.547 87.857 C 65.096 34.987 129.777 -7.635 195.215 1.154 Z" fill="var(--c-bg)" transform="translate(200 242)" /></svg>
+          <svg viewBox="0 0 800 965.477" class="cell-slot__svg cell-slot__svg--sharp"><path d="M 390.429 2.308 C 514.953 19.034 570.996 157.9 649.403 256.076 C 714.177 337.182 797.306 411.286 799.925 515.05 C 802.591 620.687 733.972 709.314 662.813 787.434 C 586.99 870.674 502.739 956.57 390.429 964.602 C 272.155 973.061 153.046 919.601 76.083 829.396 C 3.689 744.545 11.134 626.505 6.873 515.05 C 2.343 396.555 -19.936 270.668 51.094 175.714 C 130.192 69.975 259.553 -15.27 390.429 2.308 Z" fill="url(#cgcCell)" /><path d="M 195.215 1.154 C 257.477 9.517 285.498 78.95 324.701 128.038 C 357.089 168.591 398.653 205.643 399.962 257.525 C 401.295 310.343 366.986 354.657 331.407 393.717 C 293.495 435.337 251.369 478.285 195.215 482.301 C 136.077 486.531 76.523 459.801 38.042 414.698 C 1.845 372.273 5.567 313.253 3.437 257.525 C 1.172 198.277 -9.968 135.334 25.547 87.857 C 65.096 34.987 129.777 -7.635 195.215 1.154 Z" fill="var(--c-bg)" transform="translate(200 242)" /></svg>
+          </div>
+          </div>
+          <div class="cell-slot" aria-hidden="true" data-cell-slot="1">
+          <div class="cell-slot__inner">
+          <svg viewBox="0 0 800 620.15" class="cell-slot__svg cell-slot__svg--soft"><path d="M 414.086 3.083 C 504.24 -2.954 599.548 -5.7 670.547 50.186 C 748.74 111.734 796.309 207.198 799.746 306.648 C 803.292 409.272 769.895 518.34 688.908 581.47 C 613.47 640.276 509.223 617.181 414.086 607.277 C 332.704 598.805 257.301 577.715 191.089 529.645 C 108.74 469.859 0.29 408.411 0.001 306.648 C -0.289 204.835 107.703 142.573 189.815 82.377 C 256.294 33.641 331.841 8.59 414.086 3.083 Z" fill="url(#cgcCell)" /><path d="M 207.043 1.541 C 252.12 -1.477 299.774 -2.85 335.274 25.093 C 374.37 55.867 398.154 103.599 399.873 153.324 C 401.646 204.636 384.947 259.17 344.454 290.735 C 306.735 320.138 254.611 308.591 207.043 303.639 C 166.352 299.402 128.651 288.858 95.545 264.822 C 54.37 234.929 0.145 204.205 0 153.324 C -0.145 102.418 53.851 71.286 94.907 41.188 C 128.147 16.821 165.92 4.295 207.043 1.541 Z" fill="var(--c-bg)" transform="translate(200 155)" /></svg>
+          <svg viewBox="0 0 800 620.15" class="cell-slot__svg cell-slot__svg--sharp"><path d="M 414.086 3.083 C 504.24 -2.954 599.548 -5.7 670.547 50.186 C 748.74 111.734 796.309 207.198 799.746 306.648 C 803.292 409.272 769.895 518.34 688.908 581.47 C 613.47 640.276 509.223 617.181 414.086 607.277 C 332.704 598.805 257.301 577.715 191.089 529.645 C 108.74 469.859 0.29 408.411 0.001 306.648 C -0.289 204.835 107.703 142.573 189.815 82.377 C 256.294 33.641 331.841 8.59 414.086 3.083 Z" fill="url(#cgcCell)" /><path d="M 207.043 1.541 C 252.12 -1.477 299.774 -2.85 335.274 25.093 C 374.37 55.867 398.154 103.599 399.873 153.324 C 401.646 204.636 384.947 259.17 344.454 290.735 C 306.735 320.138 254.611 308.591 207.043 303.639 C 166.352 299.402 128.651 288.858 95.545 264.822 C 54.37 234.929 0.145 204.205 0 153.324 C -0.145 102.418 53.851 71.286 94.907 41.188 C 128.147 16.821 165.92 4.295 207.043 1.541 Z" fill="var(--c-bg)" transform="translate(200 155)" /></svg>
+          </div>
+          </div>
+          <div class="cell-slot" aria-hidden="true" data-cell-slot="2">
+          <div class="cell-slot__inner">
+          <svg viewBox="0 0 800 837.013" class="cell-slot__svg cell-slot__svg--soft"><path d="M 410.833 0.093 C 519.711 2.875 611.434 73.735 684.695 154.328 C 753.955 230.518 800.894 325.228 799.987 428.19 C 799.088 530.291 750.517 623.51 679.915 697.272 C 607.512 772.915 515.188 826.159 410.833 834.759 C 296.97 844.143 174.527 826.066 93.415 745.608 C 12.079 664.928 -4.556 542.62 0.96 428.19 C 6.179 319.908 47.636 218.269 122.607 139.964 C 199.382 59.776 299.853 -2.743 410.833 0.093 Z" fill="url(#cgcCell)" /><path d="M 205.416 0.046 C 259.856 1.438 305.717 36.868 342.347 77.164 C 376.977 115.259 400.447 162.614 399.994 214.095 C 399.544 265.145 375.258 311.755 339.957 348.636 C 303.756 386.457 257.594 413.079 205.416 417.379 C 148.485 422.071 87.263 413.033 46.707 372.804 C 6.04 332.464 -2.278 271.31 0.48 214.095 C 3.09 159.954 23.818 109.134 61.304 69.982 C 99.691 29.888 149.927 -1.372 205.416 0.046 Z" fill="var(--c-bg)" transform="translate(200 209.544)" /></svg>
+          <svg viewBox="0 0 800 837.013" class="cell-slot__svg cell-slot__svg--sharp"><path d="M 410.833 0.093 C 519.711 2.875 611.434 73.735 684.695 154.328 C 753.955 230.518 800.894 325.228 799.987 428.19 C 799.088 530.291 750.517 623.51 679.915 697.272 C 607.512 772.915 515.188 826.159 410.833 834.759 C 296.97 844.143 174.527 826.066 93.415 745.608 C 12.079 664.928 -4.556 542.62 0.96 428.19 C 6.179 319.908 47.636 218.269 122.607 139.964 C 199.382 59.776 299.853 -2.743 410.833 0.093 Z" fill="url(#cgcCell)" /><path d="M 205.416 0.046 C 259.856 1.438 305.717 36.868 342.347 77.164 C 376.977 115.259 400.447 162.614 399.994 214.095 C 399.544 265.145 375.258 311.755 339.957 348.636 C 303.756 386.457 257.594 413.079 205.416 417.379 C 148.485 422.071 87.263 413.033 46.707 372.804 C 6.04 332.464 -2.278 271.31 0.48 214.095 C 3.09 159.954 23.818 109.134 61.304 69.982 C 99.691 29.888 149.927 -1.372 205.416 0.046 Z" fill="var(--c-bg)" transform="translate(200 209.544)" /></svg>
+          </div>
+          </div>
+        </div>
+
+        <div class="band__copy">
+          <div class="carousel">
+            <div class="slide" data-slide>
+              <div class="slide__card">
+                <h3 class="slide__title">IMAXT and Rosetta: the teams that took on the 3D tumour mapping challenge</h3>
+                <p class="slide__body">This landmark conference will bring together global leaders in cancer research, technology development and clinical practice to explore the frontiers of spatial biology.</p>
+                <a class="btn" href="#">View the challenge <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+                <div class="tags">
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>3D tumour mapping</span>
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>IMAXT</span>
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>Rosetta</span>
+                </div>
+                <div class="pips" role="tablist" aria-label="Challenge slides">
+                  <button class="pip" type="button" role="tab" data-pip aria-label="Go to challenge 1" aria-selected="true"></button>
+                  <button class="pip" type="button" role="tab" data-pip aria-label="Go to challenge 2" aria-selected="false"></button>
+                  <button class="pip" type="button" role="tab" data-pip aria-label="Go to challenge 3" aria-selected="false"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide" data-slide>
+              <div class="slide__card">
+                <h3 class="slide__title">NexTGen: bringing the promise of immunotherapy to children with solid tumours</h3>
+                <p class="slide__body">Developing next-generation cell therapies against the solid tumours that affect children, where immunotherapy has so far made least progress.</p>
+                <a class="btn" href="#">View the challenge <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+                <div class="tags">
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Solid tumours in children</span>
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>NexTGen</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide" data-slide>
+              <div class="slide__card">
+                <h3 class="slide__title">SAMBAI: understanding the roots of cancer inequity</h3>
+                <p class="slide__body">Bringing together social, environmental, molecular and genetic data to explain the stark differences in cancer outcomes between populations.</p>
+                <a class="btn" href="#">View the challenge <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+                <div class="tags">
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Cancer inequities</span>
+                  <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>SAMBAI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-arrows">
+          <button class="btn-round" type="button" data-carousel-prev aria-label="Previous challenge">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+          </button>
+          <button class="btn-round" type="button" data-carousel-next aria-label="Next challenge">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Discover magazine
+         ================================================================== -->
+    <section class="section" aria-labelledby="discover-heading">
+      <div class="section-head">
+        <h2 class="section-head__title" id="discover-heading">Discover magazine</h2>
+        <p class="section-head__intro">Discover magazine celebrates how the global Cancer Grand Challenges community is coming together, thinking differently and driving progress against some of cancer's toughest challenges.</p>
+      </div>
+
+      <div class="promo promo--discover">
+        <div class="promo__panel promo__panel--stack">
+          <h3 class="promo__title">Read Discover</h3>
+          <p class="promo__body">Each edition explores scientific highlights from the research teams, updates from key members of the Cancer Grand Challenges community, and delves further into the new challenges or funded teams from that year.</p>
+          <a class="btn btn--on-accent" href="#">Read the latest issue <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+        </div>
+        <div class="promo__panel promo__media">
+          <img src="assets/img/discover-hero.jpg" alt="Speaker at the Cancer Grand Challenges Summit" width="850" height="576" loading="lazy">
+        </div>
+      </div>
+
+      <div class="teaser-grid">
+        <article class="teaser teaser--featured">
+          <div class="teaser__media-col">
+            <div class="teaser__media">
+              <img src="assets/img/discover-1.jpg" alt="" width="763" height="428" loading="lazy">
+            </div>
+          </div>
+          <div class="teaser__body">
+            <div class="meta">
+              <span class="meta__item meta__item--type">News</span>
+              <span class="meta__item">23 April 2025</span>
+              <span class="meta__item">10 min read</span>
+            </div>
+            <h3 class="teaser__title"><a href="#">Global characterisation of mutational signatures reveals bacterial toxin as a potential driver of early-onset colorectal cancer</a></h3>
+            <p class="teaser__summary">A study linking a common bacterial toxin to early-onset colorectal cancer.</p>
+            <div class="tags">
+              <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Cachexia</span>
+              <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>PRECISION</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="teaser teaser--featured">
+          <div class="teaser__media-col">
+            <div class="teaser__media">
+              <img src="assets/img/discover-2.jpg" alt="" width="763" height="428" loading="lazy">
+            </div>
+          </div>
+          <div class="teaser__body">
+            <div class="meta">
+              <span class="meta__item meta__item--type">Blog</span>
+              <span class="meta__item">08 January 2026</span>
+              <span class="meta__item">10 min read</span>
+            </div>
+            <h3 class="teaser__title"><a href="#">Tissue specificity: a tale of two populations in the skin</a></h3>
+            <p class="teaser__summary">Why the same mutation behaves differently depending on where in the body it appears.</p>
+            <div class="tags">
+              <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Tissue specificity</span>
+              <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>SPECIFICANCER</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Research library
+         ================================================================== -->
+    <section class="section" aria-labelledby="library-heading">
+      <div class="section-head section-head--cta">
+        <div class="section-head__copy">
+          <h2 class="section-head__title" id="library-heading">Research library</h2>
+          <p class="section-head__intro">Important discoveries from our funded teams, shared in peer-reviewed scientific journals.</p>
+        </div>
+        <a class="btn btn--section" href="#">Explore all <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      </div>
+
+      <div class="publication-list">
+        <article class="teaser teaser--publication">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Publication</span>
+            <span class="meta__item">29 July 2025</span>
+            <span class="meta__item">Cell</span>
+          </div>
+          <h3 class="teaser__title"><a href="#">Do autoantibodies shape cancer immunosurveillance?</a></h3>
+          <span class="teaser__authors">Arafath K. Najumudeen et al</span>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Cancer causes</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>ATLAS</span>
+          </div>
+        </article>
+
+        <article class="teaser teaser--publication">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Publication</span>
+            <span class="meta__item">11 June 2025</span>
+            <span class="meta__item">Nature</span>
+          </div>
+          <h3 class="teaser__title"><a href="#">Tissue-specific constraints on oncogenic transformation in human epithelia</a></h3>
+          <span class="teaser__authors">L. Moretto et al</span>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>Cancer causes</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>SPECIFICANCER</span>
+          </div>
+        </article>
+
+        <article class="teaser teaser--publication">
+          <div class="meta">
+            <span class="meta__item meta__item--type">Publication</span>
+            <span class="meta__item">30 May 2025</span>
+            <span class="meta__item">Nature Communications</span>
+          </div>
+          <h3 class="teaser__title"><a href="#">Spatially resolved mapping of the tumour microenvironment at single-cell resolution</a></h3>
+          <span class="teaser__authors">B. Rhodes et al</span>
+          <div class="tags">
+            <span class="tag"><span class="tag__icon" aria-hidden="true">science</span>3D tumour mapping</span>
+            <span class="tag"><span class="tag__icon" aria-hidden="true">groups</span>IMAXT</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Newsletter signup
+         ================================================================== -->
+    <section class="section" aria-labelledby="signup-heading">
+      <div class="section-head">
+        <h2 class="section-head__title" id="signup-heading">Subscribe to our newsletter</h2>
+        <p class="section-head__intro">Stay updated on Cancer Grand Challenges news, including funding calls, newsletters and more.</p>
+      </div>
+
+      <form class="signup" data-signup>
+        <label class="visually-hidden" for="cgc-interest">I'm interested in</label>
+        <div class="signup__select-wrap">
+          <select class="signup__select" id="cgc-interest" name="interest">
+            <option>I'm interested in</option>
+            <option>Funding calls</option>
+            <option>Research news</option>
+            <option>Conferences and events</option>
+          </select>
+          <svg class="icon signup__caret" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+        </div>
+
+        <label class="visually-hidden" for="cgc-name">Name</label>
+        <input class="signup__input" id="cgc-name" name="name" type="text" placeholder="Name" autocomplete="name">
+
+        <label class="visually-hidden" for="cgc-email">Email address</label>
+        <input class="signup__input" id="cgc-email" name="email" type="email" placeholder="Email address" autocomplete="email">
+
+        <button class="btn btn--filled" type="submit">Subscribe now <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       Footer
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div class="footer-col footer-col--brand">
+        <img class="footer-logo" src="assets/img/cruk-logo.png" alt="Cancer Research UK" width="402" height="386" loading="lazy">
+        <p class="footer-legal">Cancer Research UK is a registered charity in England and Wales (1089464), Scotland (SC041666), the Isle of Man (1103) and Jersey (247).</p>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="footer-links-heading">
+        <h2 class="footer-col__title" id="footer-links-heading">Useful links</h2>
+        <div class="footer-links">
+          <a class="footer-link" href="#">Terms and conditions</a>
+          <a class="footer-link" href="#">Privacy</a>
+          <a class="footer-link" href="#">Modern Slavery Statement</a>
+          <a class="footer-link" href="#">Cookies</a>
+          <a class="footer-link" href="#">Accessibility</a>
+          <a class="footer-link" href="#">Sitemap</a>
+        </div>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-col__title">Contact</h2>
+        <div class="footer-contact">
+          <a class="footer-email" href="mailto:info@cancergrandchallenges.org">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>info@cancergrandchallenges.org
+          </a>
+          <div class="social">
+            <a class="social__link" href="#" aria-label="LinkedIn"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
+            <a class="social__link" href="#" aria-label="X"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-x"></use></svg></a>
+            <a class="social__link" href="#" aria-label="YouTube"><svg class="icon icon--lg" aria-hidden="true"><use href="#i-youtube"></use></svg></a>
+          </div>
+        </div>
+        <a class="btn" href="#">Sign up for our newsletter <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <span>© Cancer Grand Challenges 2026</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

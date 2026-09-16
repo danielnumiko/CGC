@@ -23,7 +23,7 @@ Then open <http://localhost:8000>.
 
 ## Reviewing it
 
-`preview.html` is the prototype harness: the page in a device window, with the
+The site root is the prototype harness: the page in a device window, with the
 breakpoint and theme toolbar from the design canvas.
 
 - **Breakpoint** — 320, 768, 1280 or 1920. Sizes scale down to fit the window
@@ -35,13 +35,15 @@ Both choices persist across reloads.
 The frame is a real iframe, so the page's own media queries do the work: what
 you see at 768 is what a 768px browser gets, not a simulation.
 
-`index.html` stays free of any of this — it's the page as it would ship.
+`page.html` is the page on its own, free of any of this — as it would ship.
+There's a link to it in the toolbar.
 
 ## Structure
 
 ```
-index.html              the page
-preview.html            device-frame harness for review, not part of the page
+index.html              device-frame harness for review, not part of the page
+page.html               the page itself
+preview.html            redirect stub, keeps the old harness URL working
 assets/css/tokens.css   design tokens, resolved at four breakpoints
 assets/css/styles.css   components
 assets/js/main.js       challenge carousel + background cell parallax
@@ -88,7 +90,7 @@ runs vertically below 1280 and horizontally above it.
 
 Dark is the default. A light theme ships as an ink/paper flip of the same
 tokens — set `data-theme="light"` on `<html>`, or use the toggle in
-`preview.html`. Yellow has no contrast on paper, so the accent becomes brand
+the harness. Yellow has no contrast on paper, so the accent becomes brand
 orange, darkened again where it is used as type.
 
 ## Fonts
@@ -102,9 +104,17 @@ Body, prose and meta text are Roboto, loaded from Google Fonts.
 
 ## Images
 
-`assets/img/` currently holds placeholder tiles at the correct dimensions for
-five of the photographs. They are flat dark gradients, not photography, and
-need replacing with the real exports at the same filenames and sizes:
+The five photographs and both logos are the real assets. `grain.jpg` is still a
+placeholder tile — it sits at `--grain-op: 0` by default, so it isn't visible
+until the grain is dialled up.
+
+`conference-media.jpg` was supplied as a screenshot of an already-rendered card,
+with an "Event" pill and white rounded corners in the pixels. It is cropped to
+801 × 336 to remove both — the card supplies its own radius and its own SOLD OUT
+badge, and the media frame covers, so the aspect doesn't need to match. A clean
+817 × 418 export would restore the foreground the crop costs.
+
+Design dimensions, for replacements:
 
 | File | Size |
 | --- | --- |
@@ -113,16 +123,13 @@ need replacing with the real exports at the same filenames and sizes:
 | `discover-2.jpg` | 763 × 428 |
 | `discover-hero.jpg` | 850 × 576 |
 | `conference-media.jpg` | 817 × 418 |
-| `grain.jpg` | tiling grain texture |
 
 The news teaser image ratio is a fixed 16:9 everywhere except 768, where the
 component switches to a side-by-side layout and the image fills the card height
 instead. That is intentional.
 
-Both logos (`cgc-logo.png`, `cruk-logo.png`) are the real assets.
-
 Grain sits at `--grain-op: 0` by default, matching the design. Raise it in
-`tokens.css` to dial the texture up.
+`tokens.css` to dial the texture up — and swap in a real grain tile first.
 
 ## Content
 

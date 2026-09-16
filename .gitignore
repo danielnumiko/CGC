@@ -6,3 +6,9 @@ assets/fonts/*.otf
 assets/fonts/*.ttf
 assets/fonts/*.woff
 assets/fonts/*.woff2
+
+# Source exports dropped into assets/img for reference — the site uses the
+# renamed copies, so keep these out of a stray `git add -A`
+assets/img/Frame*
+assets/img/Rectangle*
+assets/img/Media.jpg
